@@ -1,0 +1,21 @@
+.container_side_nav {
+  background-color: black;
+  margin-right: 70%;
+  border: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropDown {
+  background-color: white;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons_sideNav {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
