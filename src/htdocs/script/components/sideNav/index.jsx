@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './styles.css';
 import { getPlatforms, getGenres, getPublishers } from '../../../../services/server';
+import { AuthContext } from '../../../../provider/context';
 
 export default function Sidenav() {
+
+  const { upDateFilter } = useContext(AuthContext)
+
+  const handleClick = ({target}) => {
+    const {name, value} = target
+    upDateFilter(name, value);
+  }
 
   return (
     <div className="container_side_nav">
@@ -11,7 +19,7 @@ export default function Sidenav() {
           {getPlatforms().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
-              <input type="checkbox" name={data} id={data} />
+              <input type="checkbox" name="Platform" id={data} value={data} onClick={handleClick}/>
             </label>
           ))}
         </fieldset>
@@ -19,7 +27,7 @@ export default function Sidenav() {
           {getGenres().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
-              <input type="checkbox" name={data} id={data} />
+              <input type="checkbox" name="Genre" id={data} value={data} onClick={handleClick}/>
             </label>
           ))}
         </fieldset>
@@ -27,7 +35,7 @@ export default function Sidenav() {
           {getPublishers().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
-              <input type="checkbox" name={data} id={data} />
+              <input type="checkbox" name="Publisher" id={data} value={data} onClick={handleClick}/>
             </label>
           ))}
         </fieldset>
