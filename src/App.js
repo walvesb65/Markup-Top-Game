@@ -1,5 +1,5 @@
-import './App.css';
 import React from 'react';
+import '../src/htdocs/style/globalstyle.css'
 import MarkupPage from "./htdocs/script/pages/MarkupPage/index";
 
 function App() {
