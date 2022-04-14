@@ -1,24 +1,22 @@
 import React from 'react'
-import dbJson from '../../../data.json'
 import './styles.css';
+import { getPlatforms } from '../../../../services/server';
 
 export default function Sidenav() {
 
-  const { platform, gender, developer } = dbJson;
-
   return (
     <div className="container_side_nav">
-      <div className="dropDown">
+      <div className="drop_Down">
         <fieldset className="select_platform">
-          {platform.map((data) => (
+          {getPlatforms().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
               <input type="checkbox" name={data} id={data} />
             </label>
           ))}
         </fieldset>
-        <fieldset className="select_gender">
-          {gender.map((data) => (
+        {/* <fieldset className="select_gender">
+          {getPlatforms().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
               <input type="checkbox" name={data} id={data} />
@@ -26,13 +24,13 @@ export default function Sidenav() {
           ))}
         </fieldset>
         <fieldset className="select_developer">
-          {developer.map((data) => (
+          {getPlatforms().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
               <input type="checkbox" name={data} id={data} />
             </label>
           ))}
-        </fieldset>
+        </fieldset> */}
       </div>
       <div className="buttons_sideNav">
         <button>Desfazer Filtros</button>
