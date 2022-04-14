@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css';
-import { getPlatforms } from '../../../../services/server';
+import { getPlatforms, getGenres, getPublishers } from '../../../../services/server';
 
 export default function Sidenav() {
 
@@ -15,8 +15,8 @@ export default function Sidenav() {
             </label>
           ))}
         </fieldset>
-        {/* <fieldset className="select_gender">
-          {getPlatforms().map((data) => (
+        <fieldset className="select_gender">
+          {getGenres().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
               <input type="checkbox" name={data} id={data} />
@@ -24,13 +24,13 @@ export default function Sidenav() {
           ))}
         </fieldset>
         <fieldset className="select_developer">
-          {getPlatforms().map((data) => (
+          {getPublishers().map((data) => (
             <label htmlFor={data} key={data}>
               {data}
               <input type="checkbox" name={data} id={data} />
             </label>
           ))}
-        </fieldset> */}
+        </fieldset>
       </div>
       <div className="buttons_sideNav">
         <button>Desfazer Filtros</button>
