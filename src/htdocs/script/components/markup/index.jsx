@@ -1,5 +1,6 @@
 import React from 'react';
 import DateSeciton from './deteSection';
+import SalePrice from './salesSection';
 import GamesRanking from './topGamesSection';
 
 export default function Markup() {
@@ -7,6 +8,7 @@ export default function Markup() {
     <div className="container_markup">
       <DateSeciton />
       <GamesRanking />
+      <SalePrice />
     </div>
   )
 }

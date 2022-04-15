@@ -4,7 +4,6 @@ import useReport from '../../../hooks/useReport'
 export default function GamesRanking() {
 
   const { Ranking } = useReport();
-  console.log(Ranking);
   return (
     <div className="container_top_game">
       <h1>Top 10 Games</h1>

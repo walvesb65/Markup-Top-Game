@@ -5,7 +5,7 @@ import useFilter from '../../hooks/useFilter';
 
 export default function Sidenav() {
 
-  const { updateFilterOptions, clearFilterOptions } = useFilter()
+  const { updateFilterOptions, clearFilterOptions, filterOptions } = useFilter()
   const handleClick = ({target}) => {
     const {name, value} = target
     updateFilterOptions(name, value);
