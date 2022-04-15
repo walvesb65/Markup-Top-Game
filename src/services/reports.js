@@ -1,21 +1,22 @@
 const dbjson = require('../data.json');
 
-function filterBy(filter) {
-  const type = Object.keys(filter);
+function filterData(filterOptions) {
+  const types = Object.keys(filterOptions)
+    .filter((type) => filterOptions[type].length > 0);
   return dbjson.filter((data) => {
-    switch (type.length) {
+    switch (types.length) {
       case 1:
-        return filter[type[0]].includes(data[type[0]]);
+        return filterOptions[types[0]].includes(data[types[0]]);
       case 2:
         return (
-          filter[type[0]].includes(data[type[0]])
-          && filter[type[1]].includes(data[type[1]])
+          filterOptions[types[0]].includes(data[types[0]])
+          && filterOptions[types[1]].includes(data[types[1]])
         )
       case 3:
           return (
-            filter[type[0]].includes(data[type[0]])
-            && filter[type[1]].includes(data[type[1]])
-            && filter[type[2]].includes(data[type[2]])
+            filterOptions[types[0]].includes(data[types[0]])
+            && filterOptions[types[1]].includes(data[types[1]])
+            && filterOptions[types[2]].includes(data[types[2]])
           )
       default:
         return data;
@@ -24,5 +25,5 @@ function filterBy(filter) {
 }
 
 module.exports = {
-  filterBy,
+  filterData,
 }

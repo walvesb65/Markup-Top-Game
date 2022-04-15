@@ -5,11 +5,11 @@ import { AuthContext } from '../../../../provider/context';
 
 export default function Sidenav() {
 
-  const { upDateFilter } = useContext(AuthContext)
+  const { updateFilterOptions, clearFilterOptions } = useContext(AuthContext)
 
   const handleClick = ({target}) => {
     const {name, value} = target
-    upDateFilter(name, value);
+    updateFilterOptions(name, value);
   }
 
   return (
@@ -23,9 +23,8 @@ export default function Sidenav() {
                 type="checkbox"
                 name="Platform"
                 id={data.Platform}
-                defaultChecked={data.checked}
                 value={data.Platform}
-                onClick={handleClick}
+                onChange={handleClick}
               />
             </label>
           ))}
@@ -38,9 +37,8 @@ export default function Sidenav() {
                 type="checkbox"
                 name="Genre"
                 id={data.Genre}
-                defaultChecked={data.checked}
                 value={data.Genre}
-                onClick={handleClick}
+                onChange={handleClick}
               />
             </label>
           ))}
@@ -53,16 +51,23 @@ export default function Sidenav() {
                 type="checkbox"
                 name="Publisher"
                 id={data.Publisher}
-                defaultChecked={data.checked}
                 value={data.Publisher}
-                onClick={handleClick}/>
+                onChange={handleClick}/>
             </label>
           ))}
         </fieldset>
       </div>
       <div className="buttons_sideNav">
-        <button>Desfazer Filtros</button>
-        <button>Download IMG</button> 
+        <button
+          onClick={clearFilterOptions}
+        >
+          Desfazer Filtros
+        </button>
+        <button
+          onClick={() => (window.print())}
+        >
+          Download IMG
+        </button> 
       </div>
     </div>
   )
