@@ -1,12 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './styles.css';
-import { getPlatforms, getGenres, getPublishers } from '../../../../services/server';
-import { AuthContext } from '../../../../provider/context';
+import { getplatforms, getgenres, getpublishers } from '../../../../services/server';
+import useFilter from '../../hooks/useFilter';
 
 export default function Sidenav() {
 
-  const { updateFilterOptions, clearFilterOptions } = useContext(AuthContext)
-
+  const { updateFilterOptions, clearFilterOptions } = useFilter()
   const handleClick = ({target}) => {
     const {name, value} = target
     updateFilterOptions(name, value);
@@ -16,42 +15,42 @@ export default function Sidenav() {
     <div className="container_side_nav">
       <div className="drop_Down">
         <fieldset className="select_platform">
-          {getPlatforms().map((data) => (
-            <label htmlFor={data.Platform} key={data.key}>
-              {data.Platform}
+          {getplatforms().map((data) => (
+            <label htmlFor={data.platform} key={data.key}>
+              {data.platform}
               <input
                 type="checkbox"
-                name="Platform"
-                id={data.Platform}
-                value={data.Platform}
+                name="platform"
+                id={data.platform}
+                value={data.platform}
                 onChange={handleClick}
               />
             </label>
           ))}
         </fieldset>
         <fieldset className="select_gender">
-          {getGenres().map((data) => (
-            <label htmlFor={data.Genre} key={data.key}>
-              {data.Genre}
+          {getgenres().map((data) => (
+            <label htmlFor={data.genre} key={data.key}>
+              {data.genre}
               <input
                 type="checkbox"
-                name="Genre"
-                id={data.Genre}
-                value={data.Genre}
+                name="genre"
+                id={data.genre}
+                value={data.genre}
                 onChange={handleClick}
               />
             </label>
           ))}
         </fieldset>
         <fieldset className="select_developer">
-          {getPublishers().map((data) => (
-            <label htmlFor={data.Publisher} key={data.key}>
-              {data.Publisher}
+          {getpublishers().map((data) => (
+            <label htmlFor={data.publisher} key={data.key}>
+              {data.publisher}
               <input
                 type="checkbox"
-                name="Publisher"
-                id={data.Publisher}
-                value={data.Publisher}
+                name="publisher"
+                id={data.publisher}
+                value={data.publisher}
                 onChange={handleClick}/>
             </label>
           ))}
