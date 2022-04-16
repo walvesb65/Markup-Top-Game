@@ -17,7 +17,7 @@ function getpublishers(value) {
   const setCheck = Array.from(publishers).map((e) => ({ publisher: e, key: Math.floor(Date.now() * Math.random()).toString(36) }))
   
   if (value) {
-    const regexValue = new RegExp(`\\w*${value}\\w*`);
+    const regexValue = new RegExp(`\\w*${value}\\w*`,'i');
     const test = setCheck.filter(({ publisher }) => regexValue.test(publisher));
     return test
   }
