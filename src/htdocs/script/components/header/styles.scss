@@ -1,0 +1,21 @@
+.container_header {
+  background-color: black;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0 25px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  
+  h1 {
+    font-family: 'Aharoni', sans-serif;
+    font-weight: bold;
+  }
+
+  img {
+    width: 58px;
+  }
+}

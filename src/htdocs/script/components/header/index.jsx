@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../../../assets/media/globo_logo.png';
-import './styles.css'
+import './styles.scss'
 
 export default function Header() {
   return (
