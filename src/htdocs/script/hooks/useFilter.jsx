@@ -6,7 +6,6 @@ export default function useFilter() {
 
   const { setFilteredData } = useContext(AuthContext)
 
-  console.log('test', typeof setFilteredData);
   const [filterOptions, setFilterOptions] = useState({
     platform: [],
     genre: [],
@@ -27,17 +26,17 @@ export default function useFilter() {
 
   const updateFilterOptions = (type, value) => {
     if (filterOptions[type].includes(value)) {
-      
       const removedFilter = filterOptions[type]
         .filter((e) => e !== value);
 
       setFilterOptions({
         ...filterOptions,
-        [type]:removedFilter,
+        [type]: removedFilter,
       })
     } else {
       setFilterOptions({
-        ...filterOptions, [type]: [...filterOptions[type], value] })
+        ...filterOptions, [type]: [...filterOptions[type], value]
+      })
     }
   }
 
