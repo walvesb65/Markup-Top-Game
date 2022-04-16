@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import useFilter from '../htdocs/script/hooks/useFilter'
 
 export const AuthContext = React.createContext({})
 
