@@ -1,0 +1,64 @@
+@import '../../../style/globalstyle.scss';
+
+.container_side_nav {
+  background-color: $preto;
+  display: flex;
+  flex-direction: column;
+
+  .drop_title {
+    display: flex;
+    cursor: pointer;
+
+    h1 {
+      color: $cinza-azulado-claro
+    }
+
+    .arrow_icon {
+      fill: $cinza-azulado-escuro;
+      stroke: aqua;
+    }
+  }
+
+  .drop_Down {
+    width: 25%;
+    height: 200px;
+    overflow-y: scroll;
+    background-color: $branco;
+    color: $preto;
+    display: flex;
+    flex-direction: column;
+
+    &.hidden {
+      display: none;
+    }
+
+    ul {
+      li {
+        margin-top: 2px;
+        display: flex;
+
+        label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          input {
+            margin-right: 10px;
+          }
+
+          p {
+            font-weight: bold;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.buttons_sideNav {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
