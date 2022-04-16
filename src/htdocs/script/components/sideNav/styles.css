@@ -1,17 +1,30 @@
 .container_side_nav {
   background-color: black;
-  margin-right: 70%;
-  border: transparent;
   display: flex;
   flex-direction: column;
 }
 
-.drop_Down {
+.drop_Down_platform {
+  background-color: white;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+.drop_Down_gender {
   background-color: white;
   width: 30%;
   display: flex;
   flex-direction: column;
 }
+
+.drop_Down_developer {
+  background-color: white;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .buttons_sideNav {
   width: 25%;
