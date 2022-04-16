@@ -13,17 +13,20 @@ export default function GamesRanking() {
           <tr>
             <th>Ranking</th>
             <th>Nome</th>
+            <th>Plataforma</th>
             <th>Vendas Total</th>
           </tr>
         </thead>
         <tbody>
-          {Ranking.length && Ranking.map((e, index)=> (
-          <tr key={e.name}>
+          {Ranking.length ? Ranking.map((e, index)=> (
+          <tr key={e.name + Math.floor(Date.now() * Math.random()).toString(36)}>
             <td>{index + 1}</td>
             <td>{e.name}</td>
+            <td>{e.platform}</td>
             <td>{e.globalSales}</td>
           </tr>
-          ))}
+          ))
+        : null}
         </tbody>
       </table>
       </div>
