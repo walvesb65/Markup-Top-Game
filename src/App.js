@@ -5,7 +5,7 @@ import MarkupPage from "./htdocs/script/pages/MarkupPage/index";
 function App() {
   
   return (
-    <div className="App">
+    <div className="App" id="capture">
       <MarkupPage />
     </div>
   );

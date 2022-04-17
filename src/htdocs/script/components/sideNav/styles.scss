@@ -4,61 +4,129 @@
   background-color: $preto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 18rem;
+  height: calc(100vh - 80px);
+  padding-top: 1rem;
 
-  .drop_title {
-    display: flex;
-    cursor: pointer;
-
-    h1 {
-      color: $cinza-azulado-claro
-    }
-
-    .arrow_icon {
-      fill: $cinza-azulado-escuro;
-      stroke: aqua;
-    }
-  }
-
-  .drop_Down {
-    width: 25%;
-    height: 200px;
-    overflow-y: scroll;
-    background-color: $branco;
-    color: $preto;
+  .drop_options {
     display: flex;
     flex-direction: column;
+    gap: 25px;
 
-    &.hidden {
-      display: none;
+    .drop_title {
+      display: flex;
+      justify-content: space-between;
+      padding-inline: 15px;
+      cursor: pointer;
+      margin-bottom: 15px;
+
+      h1 {
+        color: $cinza-azulado-claro;
+        font-size: 1.60rem;
+      }
+
+      .arrow_icon {
+        width: 25px;
+        transition: 0.5s ease-in-out;
+
+        &.rotate {
+          transform: rotate(-90deg);
+        }
+      }
     }
 
-    ul {
-      li {
-        margin-top: 2px;
-        display: flex;
+    .drop_down {
+      height: 200px;
+      background-color: $branco;
+      padding-inline: 5px;
+      overflow-y: scroll;
+      color: $preto;
+      display: flex;
+      flex-direction: column;
+      max-height: 200px;
+      transition: max-height 0.5s ease-in-out;
+      
+      &.hidden {
+        max-height: 0;
+      }
 
-        label {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+      .search {
+        position: relative;
 
-          input {
-            margin-right: 10px;
-          }
-
-          p {
-            font-weight: bold;
-          }
+        .input_search {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 3px;
+          border-width: 1.5px;
+          border-color: $cinza-transparente;
+          width: 95%;
+          padding: 5px;
         }
 
+        .search_icon {
+          position: absolute;
+          padding: 16.9px;
+          right: 0px;
+          width: 15px;
+          fill: $cinza-medium;
+        }
+      }
+
+      ul {
+        margin-top: 10px;
+        li {
+          margin-top: 2px;
+          display: flex;
+
+          label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+              margin-right: 10px;
+            }
+
+            p {
+              font-weight: bold;
+            }
+          }
+
+        }
       }
     }
   }
-}
 
-.buttons_sideNav {
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  .buttons_sidenav {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      cursor: pointer;
+      background-color: $cinza-azulado-escuro;
+      border: none;
+      padding: 15px;
+      margin-bottom: 13px;
+      border-radius: 5px;
+      width: 15rem;
+      display: flex;
+      justify-content: space-around;
+      color: $cinza-azulado-claro;
+      font-size: 1.30rem;
+      font-weight: bold;
+
+      .icon_donwload {
+        width: 25px;
+        fill: $branco;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+    }
+  }
 }
