@@ -5,7 +5,7 @@ export default function GamesRanking() {
 
   const { Ranking } = useReport();
   return (
-    <div className="container_top_game">
+    <div className="container_top_game top_game">
       <h1>Top 10 Games</h1>
       <div className="table">
       <table>

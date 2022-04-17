@@ -1,0 +1,27 @@
+@import '../../../style/globalstyle.scss';
+
+.container_markup {
+  display: grid;
+  background-color: $cinza-azulado-escuro;
+  width: 100%;
+  padding: 8px;
+  .sales_price {
+    grid-area: sales;
+  }
+
+  .date {
+    grid-area: time;
+  }
+
+  .top_games {
+    grid-area: topgame;
+  }
+
+  .chart {
+    grid-area: chart;
+  }
+
+  grid-template-areas: 
+  'sales sales sales time'
+  'topgame topgame chart chart';
+}

@@ -1,0 +1,57 @@
+@import '../../../../style/globalstyle.scss';
+
+@mixin value() {
+  color: $branco;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.container_sales {
+  display: flex;
+  border: 3px solid $branco;
+  padding: 20px;
+  justify-content: space-between;
+  max-height: 150px;
+
+  .sales_total{
+
+    h1 {
+      color: $branco;
+    }
+    
+    p {
+      color: $branco;
+      font-weight: bold;
+    }
+
+    .value {
+      color: $branco;
+      font-weight: bold;
+      font-size: 50px;
+    }
+
+  }
+
+  .sales_by_continent {
+    h1 {
+      color: $branco;
+    }
+    p {
+      color: $branco;
+      font-weight: bold;
+    }
+    .values_sales{
+      display: flex;
+      gap: 30px;
+      span {
+        color: $branco;
+        font-weight: bold;
+        .value {
+          color: $branco;
+          font-weight: bold;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
