@@ -1,6 +1,6 @@
 import React from 'react'
 import useReport from '../../../hooks/useReport'
-
+import './styles.scss'
 export default function GamesRanking() {
 
   const { Ranking } = useReport();
@@ -11,19 +11,17 @@ export default function GamesRanking() {
       <table>
         <thead>
           <tr>
-            <th>Ranking</th>
-            <th>Nome</th>
-            <th>Plataforma</th>
-            <th>Vendas Total</th>
+            <th className='ranking'>Ranking</th>
+            <th className='name'>Nome</th>
+            <th className='total_sales'>Vendas Total</th>
           </tr>
         </thead>
         <tbody>
           {Ranking.length ? Ranking.map((e, index)=> (
           <tr key={e.name + Math.floor(Date.now() * Math.random()).toString(36)}>
-            <td>{index + 1}</td>
-            <td>{e.name}</td>
-            <td>{e.platform}</td>
-            <td>{e.globalSales}</td>
+            <td className='ranking'>{index + 1}</td>
+            <td className='name'>{e.name}</td>
+            <td className='total_sales'>{e.globalSales}</td>
           </tr>
           ))
         : null}

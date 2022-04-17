@@ -1,0 +1,41 @@
+@import '../../../../style/globalstyle.scss';
+
+.container_top_game {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid $branco;
+  padding: 20px;
+  color: $branco;
+
+  
+  h1{
+    margin-bottom: 50px;
+  }
+  
+  .table {
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      .ranking {
+        text-align: center;
+        padding-inline: 5px;
+      }
+  
+      .name {
+        text-align: left;
+        padding-inline: 5px;
+      }
+  
+      .total_sales {
+        text-align: right;
+        padding-inline: 5px;
+      }
+  
+      th {
+        border-bottom: 2px solid $branco;
+      }
+    }
+
+  }
+}
