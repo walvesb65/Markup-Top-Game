@@ -7,7 +7,7 @@ export default function useReport() {
   const [reportData, setReportData] = useState({
     Ranking: [],
     Sales: {},
-    Historic:[]
+    Historic: []
   });
 
   const getMostSaledGames = () => {
@@ -18,20 +18,19 @@ export default function useReport() {
 
   const getValueByYear = () => {
     if (filteredData.length > 0) {
-      const response = filteredData.reduce((curr, acc) => {
-        curr[acc.year] = curr[acc.year] || [];
-        curr[acc.year].push(acc.globalSales);
-        return curr;
-    }, Object.create(null));
-      const getObjKey = Object.entries(response);
-      return getObjKey.map((e) => {
-        const totalSale = e[1].reduce((curr, acc) => {
-          return (parseFloat(curr) + parseFloat(acc)).toFixed(2)
-        }, 0)
-        return { Year: Number(e[0]), Sales: parseFloat(totalSale)}
-      });
+      const countGlobalSalesByYear = filteredData
+        .reduce((curr, { year, globalSales }) => ({
+          ...curr,
+          [year]: curr[year] ? curr[year] + parseFloat(globalSales) : parseFloat(globalSales),
+        }), {})
+      const serialize = Object.entries(countGlobalSalesByYear)
+        .map(([Year, Sales]) => ({
+          Year,
+          Sales: parseFloat(Sales.toFixed(2))
+        }))
+      return serialize
     }
-    return {}
+    return []
   };
 
   const getValuesSales = () => {

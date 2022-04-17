@@ -40,6 +40,13 @@ export default function Sidenav() {
     )
   }
 
+  const handleClearFiltersCheckeBox = () => {
+    const getInput = document.querySelectorAll('input[type="checkbox"]:checked');
+    console.log(getInput);
+    getInput.forEach((e) => {e.checked = false})
+    clearFilterOptions();
+  }
+
   const printScreen = () => {
     const screenshotTarget = document.body;
 
@@ -140,7 +147,7 @@ export default function Sidenav() {
       </div>
       <div className="buttons_sidenav">
         <button
-          onClick={clearFilterOptions}
+          onClick={handleClearFiltersCheckeBox}
         >
           Desfazer Filtros
         </button>
