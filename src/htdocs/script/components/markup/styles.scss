@@ -5,6 +5,8 @@
   background-color: $cinza-azulado-escuro;
   width: 100%;
   padding: 8px;
+  grid-gap: 10px;
+
   .sales_price {
     grid-area: sales;
   }
@@ -22,6 +24,6 @@
   }
 
   grid-template-areas: 
-  'sales sales sales time'
-  'topgame topgame chart chart';
+  'sales sales time'
+  'topgame chart chart';
 }

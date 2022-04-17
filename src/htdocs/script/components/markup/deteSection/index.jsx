@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import 'moment/locale/pt-br';
+import './styles.scss';
 
 export default function DateSeciton() {
 
@@ -19,8 +20,8 @@ export default function DateSeciton() {
 
   return (
     <div className="container_date">
-      <h1>{time}</h1>
-      <h2>{date}</h2>
+      <span className='time'>{time}</span>
+      <span className='date'>{date}</span>
     </div>
   )
 }
