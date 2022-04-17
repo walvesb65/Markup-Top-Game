@@ -1,0 +1,13 @@
+@import '../../../../style/globalstyle.scss';
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid $branco;
+  padding: 20px;
+
+  h1{
+    color: $branco;
+    margin-bottom: 70px;
+  }
+}
