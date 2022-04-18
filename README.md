@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Desafio Globo (Front-End) :rocket:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/walvesb65/Markup-Top-Game?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/walvesb65/Markup-Top-Game?style=for-the-badge)
 
-## Available Scripts
+- Projeto desenvolvido durante o processo seletivo da Rede Globo
 
-In the project directory, you can run:
+## Sobre
 
-### `npm start`
+![image](https://user-images.githubusercontent.com/78650776/163759653-16cbd087-f344-44c6-9a08-a933f712d70b.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> O desafio consiste em desenvolver uma dashboard que deverá exibir dados sobre o Top Game mundial, tendo como principal objetivo a construção de um painel para visualização dos dados extraídos, tratados e minerados pela plataforma.
 
-### `npm test`
+> Funcionalidades:
+> - Navegação lateral com opções de filtragem por Plataforma, Gênero e Desenvolvedor.
+> - Botões para PrintScreen do dashboard e remoção de filtros.
+> - Painel de vendas total e por continente.
+> - Lista dinâmica de jogos mais vendidos com base nos filtros selecionados.
+> - Gráfico com levantamento de vendas por ano.
+> - Visor com data e horário atual.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias utilizadas na construção do projeto
+- [React](https://pt-br.reactjs.org/)
+- [Moment.js](https://momentjs.com/)
+- [Recharts](https://recharts.org/en-US/)
+- [Html2canvas](https://html2canvas.hertzen.com/)
+- [Classnames](https://github.com/JedWatson/classnames)
 
-### `npm run build`
+## Pré-requisitos
+Ter instalado em sua máquina as seguintes ferramentas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [Git](https://git-scm.com), 
+* [Node.js](https://nodejs.org/en/),
+* [npm](https://www.npmjs.com/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Para rodar o projeto localmente:
+1. Clone o repositório
+  ```bash
+    $ git clone https://github.com/walvesb65/Markup-Top-Game
+  ```
+2. Entre na pasta do repositório que você acabou de clonar:
+  ```bash
+    $ cd Markup-Top-Game
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instale as dependências:
+  ```bash
+    $ npm install
+  ```
 
-### `npm run eject`
+4. Rode a aplicação:
+  ```bash
+    $ npm start
+  ```
+  * Será aberta uma página com a url: http://localhost:3000/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+:keyboard: por [Willian Alves (Will)](https://www.linkedin.com/in/willianalmeidaalves/) 😊
