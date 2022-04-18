@@ -4,8 +4,9 @@
   display: grid;
   background-color: $cinza-azulado-escuro;
   width: 100%;
-  padding: 8px;
-  grid-gap: 10px;
+  height: calc(100vh - 6rem);
+  padding: 0.5rem;
+  grid-gap: 0.4rem;
 
   .sales_price {
     grid-area: sales;

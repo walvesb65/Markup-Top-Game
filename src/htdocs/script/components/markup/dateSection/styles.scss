@@ -3,20 +3,19 @@
 .container_date {
   display: flex;
   flex-direction: column;
-  border: 5px solid $branco;
-  padding: 20px;
+  border: 0.3rem solid $branco;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
-  max-height: 150px;
   color: $branco;
   font-weight: bold;
 
   .time {
-    font-size: 2.5em;
+    font-size: 2rem;
   }
 
   .date {
-    font-size: 20px;
+    font-size: 1.2rem;
     text-transform: capitalize;
   }
 }

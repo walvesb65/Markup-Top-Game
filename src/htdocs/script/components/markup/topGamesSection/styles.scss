@@ -3,13 +3,13 @@
 .container_top_game {
   display: flex;
   flex-direction: column;
-  border: 5px solid $branco;
-  padding: 20px;
+  border: 0.3rem solid $branco;
+  padding: 1rem;
   color: $branco;
 
-  
   h1{
     margin-bottom: 50px;
+    font-size: 1.5rem;
   }
   
   .table {
@@ -36,9 +36,11 @@
   
       th {
         border-bottom: 2px solid $branco;
+        font-size: 0.8rem;
       }
       td {
         padding: 0.2rem;
+        font-size: 0.8rem;
       }
 
     }

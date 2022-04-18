@@ -5,29 +5,35 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 18rem;
-  height: calc(100vh - 80px);
+  width: 15rem;
+  max-height: 100%;
+  min-height: 100%;
   padding-top: 1rem;
 
   .drop_options {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    max-height: 40rem;
+
+    &.scroll {
+      overflow-y: scroll;
+    }
 
     .drop_title {
       display: flex;
       justify-content: space-between;
-      padding-inline: 15px;
+      padding-inline: 0.6rem;
       cursor: pointer;
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
 
       h1 {
         color: $cinza-azulado-claro;
-        font-size: 1.60rem;
+        font-size: 1.2rem;
+        padding-right: 0.5rem;
       }
 
       .arrow_icon {
-        width: 25px;
+        width: 1.6rem;
         transition: 0.5s ease-in-out;
 
         &.rotate {
@@ -37,46 +43,45 @@
     }
 
     .drop_down {
-      height: 200px;
+      height: 13rem;
       background-color: $branco;
-      padding-inline: 5px;
+      padding-inline: 0.5rem;
       overflow-y: scroll;
       color: $preto;
+      margin-bottom: 1rem;
       display: flex;
       flex-direction: column;
-      max-height: 200px;
-      transition: max-height 0.5s ease-in-out;
+      transition: height 0.5s ease-in-out;
       
       &.hidden {
-        max-height: 0;
+        height: 0;
       }
 
       .search {
         position: relative;
 
         .input_search {
-          margin-top: 10px;
-          margin-bottom: 10px;
-          border-radius: 3px;
-          border-width: 1.5px;
+          margin-top: 0.5rem;
+          border-radius: 0.3rem;
+          border-width: 0.1rem;
           border-color: $cinza-transparente;
           width: 95%;
-          padding: 5px;
+          padding: 0.2rem;
         }
 
         .search_icon {
           position: absolute;
-          padding: 16.9px;
-          right: 0px;
-          width: 15px;
+          top: 0.85rem;
+          right: 0.5rem;
+          width: 0.8rem;
           fill: $cinza-medium;
         }
       }
 
       ul {
-        margin-top: 10px;
+        margin-top: 0.6rem;
         li {
-          margin-top: 2px;
+          margin-top: 0.2rem;
           display: flex;
 
           label {
@@ -85,7 +90,7 @@
             align-items: center;
 
             input {
-              margin-right: 10px;
+              margin-right: 0.6rem;
             }
 
             p {
@@ -99,7 +104,7 @@
   }
 
   .buttons_sidenav {
-    padding-bottom: 30px;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,18 +113,18 @@
       cursor: pointer;
       background-color: $cinza-azulado-escuro;
       border: none;
-      padding: 15px;
-      margin-bottom: 13px;
-      border-radius: 5px;
-      width: 15rem;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border-radius: 0.3rem;
+      width: 11rem;
       display: flex;
       justify-content: space-around;
       color: $cinza-azulado-claro;
-      font-size: 1.30rem;
+      font-size: 1.1rem;
       font-weight: bold;
 
       .icon_donwload {
-        width: 25px;
+        width: 1.5rem;
         fill: $branco;
       }
 

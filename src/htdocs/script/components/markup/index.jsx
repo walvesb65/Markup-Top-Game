@@ -1,5 +1,5 @@
 import React from 'react';
-import DateSection from './deteSection';
+import DateSection from './dateSection';
 import SalePrice from './salesSection';
 import GamesRanking from './topGamesSection';
 import ChartSales from './historicSection';

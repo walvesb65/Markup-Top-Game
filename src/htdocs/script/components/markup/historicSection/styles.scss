@@ -3,11 +3,12 @@
 .chart {
   display: flex;
   flex-direction: column;
-  border: 5px solid $branco;
-  padding: 20px;
+  border: 0.3rem solid $branco;
+  padding: 2rem;
 
   h1{
     color: $branco;
     margin-bottom: 70px;
+    font-size: 1.5rem;
   }
 }

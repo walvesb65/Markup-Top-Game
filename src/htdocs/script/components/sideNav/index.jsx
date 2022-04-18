@@ -12,33 +12,29 @@ import './styles.scss';
 
 export default function Sidenav() {
 
-  const { updateFilterOptions, clearFilterOptions } = useFilter()
-  const handleClickOptions = ({ target }) => {
-    const { name, value } = target
-    updateFilterOptions(name, value);
-  }
+  const { updateFilterOptions, clearFilterOptions } = useFilter()  
+  const [value, setValue] = useState("")
   const [isShow, setIsShow] = useState({
     platform: true,
     genre: true,
     publisher: true
   });
-
-  const [value, setValue] = useState("")
-  useEffect(() => {
-  }, [value])
-
+  
+  const handleClickOptions = ({ target }) => {
+    const { name, value } = target
+    updateFilterOptions(name, value);
+  };
+  
   const handleClickDrop = (type) => {
     setIsShow({
       ...isShow,
       [type]: !isShow[type]
     });
-  }
+  };
 
-  const handlechange = ({ target: { value } }) => {
-    setValue(
-      value
-    )
-  }
+  const handlechangeValue = ({ target: { value } }) => {
+    setValue(value)
+  };
 
   const handleClearFiltersCheckeBox = () => {
     const getInput = document.querySelectorAll('input[type="checkbox"]:checked');
@@ -65,8 +61,7 @@ export default function Sidenav() {
 
   return (
     <div className="container_side_nav">
-      <div className="drop_options">
-
+      <div className='drop_options'>
         <div className="platform">
           <div onClick={() => handleClickDrop('platform')} className="drop_title">
             <h1>Plataforma</h1>
@@ -122,7 +117,7 @@ export default function Sidenav() {
           </div>
           <div className={classNames('drop_down', { hidden: isShow.publisher })}>
             <div className="search">
-              <input type="text" onChange={handlechange} className="input_search" />
+              <input type="text" onChange={handlechangeValue} className="input_search" />
               <Search className='search_icon' />
             </div>
 

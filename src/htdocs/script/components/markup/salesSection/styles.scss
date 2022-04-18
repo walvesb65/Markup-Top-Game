@@ -3,31 +3,35 @@
 @mixin value() {
   color: $branco;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .container_sales {
   display: flex;
-  border: 5px solid $branco;
-  padding: 20px;
-  justify-content: space-between;
-  max-height: 150px;
+  border: 0.3rem solid $branco;
+  padding: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
 
   .sales_total{
 
     h1 {
       color: $branco;
+      font-size: 1.5rem;
     }
     
     p {
       color: $branco;
       font-weight: bold;
+      font-size: 0.8rem;
     }
-
+    
     .value {
       color: $branco;
       font-weight: bold;
-      font-size: 50px;
+      font-size: 2.5rem;
+      margin-bottom: 0.9rem;
     }
 
   }
@@ -35,21 +39,24 @@
   .sales_by_continent {
     h1 {
       color: $branco;
+      font-size: 1.5rem;
     }
     p {
       color: $branco;
       font-weight: bold;
+      font-size: 0.8rem;
     }
     .values_sales{
       display: flex;
-      gap: 30px;
+      gap: 2rem;
       span {
+        font-size: 0.8rem;
         color: $branco;
         font-weight: bold;
         .value {
           color: $branco;
           font-weight: bold;
-          font-size: 50px;
+          font-size: 2.5rem;
         }
       }
     }

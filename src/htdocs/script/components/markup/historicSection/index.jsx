@@ -10,7 +10,7 @@ export default function ChartSales() {
   return (
     <div className="chart">
       <h1>Histórico</h1>
-      <LineChart width={1000} height={500} data={Historic} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+      <LineChart width={650} height={300} data={Historic} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
         <Line dataKey="Sales" stroke="#fff" strokeWidth={4}/>
         <XAxis padding={{left: 30 , right: 30}} dataKey="Year" stroke="#fff" style={{ fontWeight: "bold" }} />
         <YAxis stroke="#fff" axisLine={false} style={{ fontWeight: "bold" }} />
