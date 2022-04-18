@@ -20,6 +20,8 @@
 > - Gráfico com levantamento de vendas por ano.
 > - Visor com data e horário atual.
 
+> PS: É possivel testar a aplicação em resolução de (1440px x 800px).
+
 ## Tecnologias utilizadas na construção do projeto
 - [React](https://pt-br.reactjs.org/)
 - [Moment.js](https://momentjs.com/)
